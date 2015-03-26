@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 21
+    buildToolsVersion "20.0.0"
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            jniLibs.srcDir 'libs' // <-- 你的.so库的实际路径
+            jni.srcDirs 'jni'
+        }
+    }
+    defaultConfig {
+        ndk {
+            moduleName "hello-jni"
+//            cFlags cFlags + " -mtune=atom -mssse3 -mfpmath=sse"
+            abiFilter "armeabi"
+            ldLibs "log"// "EGL", "GLESv3", "dl",
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile project(':PluginInterface')
+}

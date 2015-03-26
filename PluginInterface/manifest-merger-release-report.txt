@@ -1,0 +1,19 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:4:5
+	package
+		ADDED from AndroidManifest.xml:3:5
+uses-sdk
+ADDED from AndroidManifest.xml:6:5
+	android:targetSdkVersion
+		ADDED from AndroidManifest.xml:8:9
+	android:minSdkVersion
+		ADDED from AndroidManifest.xml:7:9
+application
+ADDED from AndroidManifest.xml:10:5
+	android:versionName
+		ADDED from AndroidManifest.xml:12:9
+	android:versionCode
+		ADDED from AndroidManifest.xml:11:9
